@@ -25,7 +25,7 @@ with open('status.json', 'r') as file:
     statusData = json.load(file)
 startFrom = int(statusData['completed'])
 for index, group in enumerate(grouped_values):
-    if index > startFrom and index < startFrom+20:
+    if index == 0:
         print(index, 'Process started')
         driver.refresh()
         time.sleep(5)
